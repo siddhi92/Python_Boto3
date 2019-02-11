@@ -13,10 +13,10 @@ for instance in instances:
   print("Instance id ", instance.id)
   print("Instance state ", instance.state['Name'])
   print("Instance public DNS", instance.public_dns_name)
-  print("Tagging the instance")
-  ec2.stop_instances(instance.id)
-    print("Stop the instance")        
+  print("Tagging the instance")        
   ec2.Tag(instance.id, 'Name','Boto-Tag')
+  ec2.stop_instances(instance.id)
+  print("Stop the instance")
             
             
             
