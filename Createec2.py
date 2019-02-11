@@ -5,7 +5,7 @@ tags = [
             {'Key': 'Department', 'Value': 'Web-Dep'},
         ]
 tag_specification = [{'ResourceType': 'instance', 'Tags': tags},]
-instances = ec2.create_instances(MinCount=1, MaxCount=1, ImageId='ami-a4dc46db', InstanceType='t2.micro', SecurityGroups=['ACCENTURE_SEC_GROUP'], KeyName='ACCENTURE_KEYS',TagSpecifications=tag_specification) # create one instance with a t2.micro instance-type
+instances = ec2.create_instances(MinCount=1, MaxCount=1, ImageId='ami-0080e4c5bc078760e', InstanceType='t2.micro', SecurityGroups=['devops-demo'], KeyName='devops-demo',TagSpecifications=tag_specification) # create one instance with a t2.micro instance-type
 for instance in instances:
   print("waiting for the instance to be running state")
   instance.wait_until_running()
